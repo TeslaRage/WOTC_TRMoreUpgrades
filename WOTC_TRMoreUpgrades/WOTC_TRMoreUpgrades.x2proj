@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>f75ea349-2808-42d6-831a-4ef680ebf635</Guid>
+    <Name>WOTC_TRMoreUpgrades</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>WOTC_TRMoreUpgrades</AssemblyName>
+    <RootNamespace>WOTC_TRMoreUpgrades</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\WOTC_TRMoreUpgrades\" />
+    <Folder Include="Src\WOTC_TRMoreUpgrades\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComArmorUpgrades.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameCore.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComInfiltration.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComPGOverhaulExperimentalItems.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComPlatedVests.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComStrategyTuning.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComUIModificationWOTC.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComWotcFlawless.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\TRMoreUpgrades_Package.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\WOTC_TRMoreUpgrades.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\UISoldierHeader_TR.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Ability_MoreUpgradesAbilitySet.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2ArmorUpgradeTemplate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Condition_AbilitySourceArmor.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2DownloadableContentInfo_WOTC_TRMoreUpgrades.uc" />
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Effect_Flyover.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Effect_IncomingDamageMod.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Effect_ShieldRegeneration.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Effect_TRPsiShield.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2EventListener_TRMoreUpgrades.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_TRMoreUpgrades\Classes\X2Item_TRMoreUpgrades.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

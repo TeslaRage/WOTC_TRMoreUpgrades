@@ -1,0 +1,109 @@
+[X2DownloadableContentInfo_WOTC_TRMoreUpgrades]
+
+VestTinySummary = "+Vest Bonus"
+UtilityTinySummary = "+Utility Bonus"
+GoodColor = "#3ABD23"
+BadColor = "#CA7200"
+strModule = "Module"
+strModules = "Modules"
+
+[TRArmorUpgrade_HighCoverGenerator X2ArmorUpgradeTemplate]
+FriendlyName="Shieldwall Module"
+FriendlyNamePlural="Shieldwall Modules"
+BriefSummary="Provide high cover to squadmates wherever you stand. Moving or attacking will cancel the effect."
+TinySummary="+Utility Bonus"
+LootTooltip="Provide high cover to squadmates wherever you stand. Moving or attacking will cancel the effect."
+
+[TRArmorUpgrade_WallPhasing X2ArmorUpgradeTemplate]
+FriendlyName="Wraith Module"
+FriendlyNamePlural="Wraith Modules"
+BriefSummary="Allows the unit to pass directly through obstacles."
+TinySummary="+Utility Bonus"
+LootTooltip="Allows the unit to pass directly through obstacles."
+
+[TRArmorUpgrade_Grapple X2ArmorUpgradeTemplate]
+FriendlyName="Grapple Module"
+FriendlyNamePlural="Grapple Modules"
+BriefSummary="Deploy a grappling hook to move quickly to an elevated position."
+TinySummary="+Utility Bonus"
+LootTooltip="Deploy a grappling hook to move quickly to an elevated position."
+
+[TRArmorUpgrade_TRGrenadePocket X2ArmorUpgradeTemplate]
+FriendlyName="Heavy Ordnance Module"
+FriendlyNamePlural="Heavy Ordnance Modules"
+BriefSummary="Unlocks grenade pocket. The grenade in your grenade-only slot gains a bonus use."
+TinySummary="+Utility Bonus"
+LootTooltip="Unlocks grenade pocket. The grenade in your grenade-only slot gains a bonus use."
+
+[TRArmorUpgrade_TRAmmoPocket X2ArmorUpgradeTemplate]
+FriendlyName="Bandolier Module"
+FriendlyNamePlural="Bandolier Modules"
+BriefSummary="Gain a dedicated Ammo inventory slot."
+TinySummary="+Utility Bonus"
+LootTooltip="Gain a dedicated Ammo inventory slot."
+
+[TRArmorUpgrade_TRArmorBonus X2ArmorUpgradeTemplate]
+FriendlyName="Armor Plating Module"
+FriendlyNamePlural="Armor Plating Modules"
+BriefSummary="This hefty module gives a lot of protection with penalty to mobility. Gain 3 armor and lose 1 mobility."
+TinySummary="+Armor, -Mobility"
+LootTooltip="This hefty module gives a lot of protection with penalty to mobility. Gain 3 armor and lose 1 mobility."
+
+[TRArmorUpgrade_TRMobilityBonus X2ArmorUpgradeTemplate]
+FriendlyName="Sprinter Module"
+FriendlyNamePlural="Sprinter Modules"
+BriefSummary="Swaps out some heavy pieces on the armor for lighter ones with small penalty to defense. Gain 2 mobility and lose 10 defense."
+TinySummary="+Mobility, -Defense"
+LootTooltip="Swaps out some heavy pieces on the armor for lighter ones with small penalty to defense. Gain 2 mobility and lose 10 defense."
+
+[TRArmorUpgrade_TRPsiShield X2ArmorUpgradeTemplate]
+FriendlyName="Psi Shield Module"
+FriendlyNamePlural="Psi Shield Modules"
+BriefSummary="Makes use of innate Psi potential to generate ablative hit points. Minimum of 2 ablative."
+TinySummary="+Shield HP"
+LootTooltip="Makes use of innate Psi potential to generate ablative hit points. Minimum of 2 ablative."
+
+[TRArmorUpgrade_TRAdrenalineSurge X2ArmorUpgradeTemplate]
+FriendlyName="Adreno Flight Module"
+FriendlyNamePlural="Adreno Flight Modules"
+BriefSummary="Gain 3 mobility for 2 turns when taking damage."
+TinySummary="+Mobility"
+LootTooltip="Gain 3 mobility for 2 turns when taking damage."
+
+[TRArmorUpgrade_TRSmartMod X2ArmorUpgradeTemplate]
+FriendlyName="Smart Slot Module"
+FriendlyNamePlural="Smart Slot Modules"
+BriefSummary="Gain additional armor upgrade slot with no mutual exclusive rule."
+TinySummary="+Upgrade Slot"
+LootTooltip="Gain additional armor upgrade slot with no mutual exclusive rule."
+
+[TRArmorUpgrade_TRShieldRegen X2ArmorUpgradeTemplate]
+FriendlyName="Shield Generator Module"
+FriendlyNamePlural="Shield Generator Modules"
+BriefSummary="An effective solution for the survival of our soldiers. Provides 2 ablative points and regenerates 2 points per turn for a maximum of 6."
+TinySummary="+Shield & Shield Regen"
+LootTooltip="An effective solution for the survival of our soldiers. Provides 2 ablative points and regenerates 2 points per turn for a maximum of 6."
+
+[TRArmorUpgrade_TRPlatedComp X2ArmorUpgradeTemplate]
+FriendlyName="Plated Vest Companion Module"
+FriendlyNamePlural="Plated Vest Companion Modules"
+BriefSummary="When used with Plated Vest Module, the module no longer provides armor but instead reduces incoming damage by 20%."
+TinySummary="+Damage Reduction, -Armor"
+LootTooltip="When used with Plated Vest Module, the module no longer provides armor but instead reduces incoming damage by 20%."
+
+[TRArmorUpgrade_TRHazmatComp X2ArmorUpgradeTemplate]
+FriendlyName="Hazmat Vest Companion Module"
+FriendlyNamePlural="Hazmat Vest Companion Modules"
+BriefSummary="When used with Hazmat Vest Module, provides 66% damage reduction in explosive attacks."
+TinySummary="+Explosive Damage Reduction"
+LootTooltip="When used with Hazmat Vest Module, provides 66% damage reduction in explosive attacks."
+
+[TRArmorUpgrade_TRStasisComp X2ArmorUpgradeTemplate]
+FriendlyName="Stasis Vest Companion Module"
+FriendlyNamePlural="Stasis Vest Companion Modules"
+BriefSummary="When used with Stasis Vest Module, gain additional 1 HP per turn (not counted towards Max Heal amount) and restore 10% of Will."
+TinySummary="+HP & Will Per Turn"
+LootTooltip="When used with Stasis Vest Module, gain additional 1 HP per turn (not counted towards Max Heal amount) and restore 10% of Will."
+
+[X2Ability_MoreUpgradesAbilitySet]
+AblativeHP="ABLATIVE PLATING"
