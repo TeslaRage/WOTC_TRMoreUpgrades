@@ -35,6 +35,7 @@ static function X2DataTemplate CreateVestAsArmorUpgrade(VestConversionData VestT
 	
 	SetUpArmorUpgrade(Template, 'vest', VestToConvert.bAllowOnSpark);
 
+	Template.Tier = 1;
 	Template.VestTemplateName = VestToConvert.VestTemplateName;
 	Template.DisallowedArmors = VestToConvert.DisallowedArmors;
 	Template.bDisablesMutualExclusiveRule = VestToConvert.bDisablesMutualExclusiveRule;
@@ -142,7 +143,7 @@ static function X2DataTemplate CreateArmorUpgradeFromAbility(AbilityConversionDa
 	if (AbilityToConvert.RequiredUpgrade != '') Template.CanBeBuilt = true;
 
 	Template.TradingPostValue = 20;
-    Template.Tier = 0;
+    Template.Tier = 1;
 	Template.bDisablesMutualExclusiveRule = AbilityToConvert.bDisablesMutualExclusiveRule;
 	Template.NumOfAdditionalSlots = AbilityToConvert.NumOfAdditionalSlots;
 	Template.RequiredUpgrade = AbilityToConvert.RequiredUpgrade;

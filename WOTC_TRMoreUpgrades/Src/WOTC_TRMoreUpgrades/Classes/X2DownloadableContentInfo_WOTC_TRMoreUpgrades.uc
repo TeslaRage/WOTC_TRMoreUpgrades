@@ -581,8 +581,7 @@ static function CopyDataFromVestTemplate(out X2ArmorUpgradeTemplate ArmorUpgrade
     if (ArmorUpgradeTemplate.Requirements.RequiredTechs.Length > 0 && !ArmorUpgradeTemplate.CanBeBuilt)
         ArmorUpgradeTemplate.CanBeBuilt = true;
 
-    ArmorUpgradeTemplate.TradingPostValue = VestTemplate.TradingPostValue;
-    ArmorUpgradeTemplate.Tier = VestTemplate.Tier;
+    ArmorUpgradeTemplate.TradingPostValue = VestTemplate.TradingPostValue;    
     ArmorUpgradeTemplate.StartingItem = VestTemplate.StartingItem;
     ArmorUpgradeTemplate.bInfiniteItem = VestTemplate.bInfiniteItem;
 
