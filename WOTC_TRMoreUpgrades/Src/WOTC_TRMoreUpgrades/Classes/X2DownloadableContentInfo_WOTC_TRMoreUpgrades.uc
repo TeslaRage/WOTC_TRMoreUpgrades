@@ -1276,3 +1276,65 @@ exec function LogMutualExclusiveArrays()
         class'Helpers'.static.OutputMsg(string(GenericName), 'ArmorUpgrades');
     }
 }
+
+exec function TR_RemoveItem (name TemplateName, optional int Quantity = 1)
+{
+    local XComGameState_HeadquartersXCom XCOMHQ, NewXCOMHQ;
+    local StateObjectReference ItemRef;
+    local XComGameStateHistory History;
+    local XComGameState_Item ItemState, NewItemState;
+    local XComGameState NewGameState;
+    local bool bRemoveItem;
+
+    XCOMHQ = `XCOMHQ;
+    History = `XCOMHISTORY;
+
+    if (XCOMHQ == none || History == none)
+    {
+        return;
+    }
+
+    foreach XCOMHQ.Inventory(ItemRef)
+    {
+        ItemState = XComGameState_Item(History.GetGameStateForObjectID(ItemRef.ObjectID));
+        if (ItemState == none) continue;
+
+        if (ItemState.GetMyTemplateName() == TemplateName)
+        {
+            if (ItemState.GetMyTemplate().bInfiniteItem)
+            {
+                class'Helpers'.static.OutputMsg("Item " $TemplateName @"is an infinite item. Aborting.", 'ArmorUpgrades');
+                return;
+            }
+
+            bRemoveItem = true;
+            break;
+        }
+    }
+
+    if (bRemoveItem)
+    {
+        NewGameState = class'XComGameStateContext_ChangeContainer'.static.CreateChangeState("Armor Upgrade: Removing Item from HQ");
+        NewItemState = XComGameState_Item(NewGameState.ModifyStateObject(class'XComGameState_Item', ItemState.ObjectID));        
+
+        if (NewItemState.Quantity <= Quantity)
+        {
+            NewXCOMHQ = XComGameState_HeadquartersXCom(NewGameState.ModifyStateObject(class'XComGameState_HeadquartersXCom', XCOMHQ.ObjectID));
+            NewXCOMHQ.Inventory.RemoveItem(NewItemState.GetReference());
+            NewGameState.RemoveStateObject(NewItemState.ObjectID);
+            class'Helpers'.static.OutputMsg("Item " $NewItemState.GetMyTemplateName() @"completely removed from XCOM HQ", 'ArmorUpgrades');
+        }
+        else
+        {
+            NewItemState.Quantity -= Quantity;
+            class'Helpers'.static.OutputMsg("Item " $NewItemState.GetMyTemplateName() @"new quantity is" @NewItemState.Quantity, 'ArmorUpgrades');
+        }
+
+        `GAMERULES.SubmitGameState(NewGameState);
+    }
+    else
+    {
+        class'Helpers'.static.OutputMsg("Item " $TemplateName @"not found in XCOM HQ", 'ArmorUpgrades');
+    }
+    
+}
