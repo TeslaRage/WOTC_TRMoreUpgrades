@@ -38,6 +38,9 @@
     <Content Include="Config\XComStrategyTuning.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComUI.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComUIModificationWOTC.ini">
       <SubType>Content</SubType>
     </Content>
