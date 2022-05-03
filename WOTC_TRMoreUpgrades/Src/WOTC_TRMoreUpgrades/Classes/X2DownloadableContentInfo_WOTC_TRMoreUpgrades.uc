@@ -561,7 +561,13 @@ static function CopyDataFromVestTemplate(out X2ArmorUpgradeTemplate ArmorUpgrade
     }
     
     ArmorUpgradeTemplate.strImage = VestTemplate.strImage;
-    ArmorUpgradeTemplate.Cost = VestTemplate.Cost;
+
+    // If the upgrade already has a cost associated, it means it was done via StrategyTuning config and
+    // should not overwrite here
+    if (ArmorUpgradeTemplate.Cost.ResourceCosts.Length == 0 && ArmorUpgradeTemplate.Cost.ArtifactCosts.Length == 0)
+    {
+        ArmorUpgradeTemplate.Cost = VestTemplate.Cost;
+    }
 
     // Solving bug: PGOv2 configs are overwritten by blank required techs. The way this is done is very "patchy" and requires the least effort
     // Save tech requirements
