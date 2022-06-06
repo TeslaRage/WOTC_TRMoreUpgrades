@@ -14,6 +14,7 @@ struct VestConversionData
     var int NumOfAdditionalSlots;
     var name RequiredUpgrade;
     var array<name> MutuallyExclusives;
+    var name DLC;
 };
 
 struct AbilityConversionData
@@ -29,6 +30,7 @@ struct AbilityConversionData
     var int NumOfAdditionalSlots;
     var name RequiredUpgrade;
     var array<name> MutuallyExclusives;
+    var name DLC;
 };
 
 struct SlotToKillData

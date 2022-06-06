@@ -12,13 +12,25 @@ static function array<X2DataTemplate> CreateTemplates()
 
 	// Convert vests to armor upgrades
 	foreach default.arrVestsToConvert(VestToConvert)
-    {		
+    {
+		if (VestToConvert.DLC != '' && 
+			!class'X2DownloadableContentInfo_WOTC_TRMoreUpgrades'.static.IsModLoaded(VestToConvert.DLC))
+		{
+			continue;
+		}
+
 		Items.AddItem(CreateVestAsArmorUpgrade(VestToConvert));
 	}
 
 	// New armor upgrades based on abilities
 	foreach default.arrAbilitiesToConvert(AbilityToConvert)
-	{		
+	{
+		if (AbilityToConvert.DLC != '' && 
+			!class'X2DownloadableContentInfo_WOTC_TRMoreUpgrades'.static.IsModLoaded(AbilityToConvert.DLC))
+		{
+			continue;
+		}
+		
 		Items.AddItem(CreateArmorUpgradeFromAbility(AbilityToConvert));
 	}
 
